@@ -85,9 +85,6 @@ router.get("/chat", async (req, res) => {
 
 router.get("/splitBill", (req, res) => {
     // Check if there are orders and total number of people
-    if (orders.length === 0 || totalNumberOfPeople === 0) {
-        return res.status(400).json({ error: "No orders or number of people set." });
-    }
 
     // Create a dictionary to count how many people ordered each food item
     const foodItemCount = {};
